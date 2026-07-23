@@ -20,7 +20,7 @@ function log(msg: string) {
 }
 
 const RULES: [RegExp, (c: string) => string][] = [
-  // Git
+  // Git — status, diff, log, add, commit, push, pull, branch, fetch, stash, show
   [/^git\s+status(\s|$)/, (c) => c.replace(/^git status/, "rtk git status")],
   [/^git\s+diff(\s|$)/, (c) => c.replace(/^git diff/, "rtk git diff")],
   [/^git\s+log(\s|$)/, (c) => c.replace(/^git log/, "rtk git log")],
@@ -34,7 +34,7 @@ const RULES: [RegExp, (c: string) => string][] = [
   [/^git\s+show(\s|$)/, (c) => c.replace(/^git show/, "rtk git show")],
   // GitHub CLI
   [/^gh\s+(pr|issue|run|api|release)(\s|$)/, (c) => c.replace(/^gh /, "rtk gh ")],
-  // Files
+  // Files — ls, cat, grep, find, tree
   [/^ls(\s|$)/, (c) => c.replace(/^ls/, "rtk ls")],
   [/^cat(\s|$)/, (c) => c.replace(/^cat/, "rtk read")],
   [/^grep(\s|$)/, (c) => c.replace(/^grep/, "rtk grep")],
@@ -44,6 +44,20 @@ const RULES: [RegExp, (c: string) => string][] = [
   [/^docker\s+(ps|images|logs)(\s|$)/, (c) => c.replace(/^docker/, "rtk docker")],
   // Kubernetes
   [/^kubectl\s+(get|logs|describe)(\s|$)/, (c) => c.replace(/^kubectl/, "rtk kubectl")],
+  // Rust/Cargo
+  [/^cargo\s+(test|build|clippy|check|install)(\s|$)/, (c) => c.replace(/^cargo/, "rtk cargo")],
+  // Python — pytest, ruff
+  [/^pytest(\s|$)/, (c) => c.replace(/^pytest/, "rtk pytest")],
+  [/^ruff\s+(check|format)(\s|$)/, (c) => c.replace(/^ruff/, "rtk ruff")],
+  // Go
+  [/^go\s+(test|build|lint)(\s|$)/, (c) => c.replace(/^go/, "rtk go")],
+  // npm/pnpm
+  [/^npm\s+(test|run|list|outdated)(\s|$)/, (c) => c.replace(/^npm/, "rtk npm")],
+  [/^pnpm\s+(test|run|list)(\s|$)/, (c) => c.replace(/^pnpm/, "rtk pnpm")],
+  // curl with output
+  [/^curl(\s+--silent|\s+-s)(\s|$)/, (c) => c.replace(/^curl/, "rtk curl")],
+  // wget
+  [/^wget(\s|$)/, (c) => c.replace(/^wget/, "rtk wget")],
 ]
 
 function rewriteLine(line: string): string {
