@@ -1,0 +1,12 @@
+{
+  "name": "mimocode-rtk-hook",
+  "version": "0.1.0",
+  "description": "Automatic RTK command rewriting for MiMoCode via file hooks",
+  "keywords": ["mimocode", "opencode", "rtk", "token-optimization", "ai-agent", "hook"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murat-mimocode/mimocode-rtk-hook"
+  },
+  "files": ["hooks/"]
+}
