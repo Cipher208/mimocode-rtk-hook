@@ -36,14 +36,23 @@ rtk --version
 ## Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/Cipher208/mimocode-rtk-hook.git /tmp/mimocode-rtk-hook
+
 # Copy the hook file
 mkdir -p ~/.config/mimocode/hooks
-cp hooks/rtk.ts ~/.config/mimocode/hooks/
+cp /tmp/mimocode-rtk-hook/hooks/rtk.ts ~/.config/mimocode/hooks/
 
 # Restart MiMoCode
 ```
 
-That's it. No config changes needed — MiMoCode auto-discovers files in `hooks/`.
+Or one-liner:
+
+```bash
+mkdir -p ~/.config/mimocode/hooks && curl -fsSL https://raw.githubusercontent.com/Cipher208/mimocode-rtk-hook/master/hooks/rtk.ts -o ~/.config/mimocode/hooks/rtk.ts
+```
+
+No config changes needed — MiMoCode auto-discovers files in `hooks/`.
 
 ## Verify
 
