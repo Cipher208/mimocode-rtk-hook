@@ -1,8 +1,12 @@
 # mimocode-rtk-hook
 
-Automatic RTK command rewriting for [MiMoCode](https://github.com/nicepkg/mimocode) via the file hooks system.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MiMoCode](https://img.shields.io/badge/MiMoCode-%3E%3D0.38.0-blue.svg)](https://github.com/nicepkg/mimocode)
+[![RTK](https://img.shields.io/badge/RTK-%3E%3D0.43.0-red.svg)](https://github.com/rtk-ai/rtk)
 
-**60-90% fewer tokens** on shell command output — no manual `rtk` prefix needed.
+> Shell commands cost 60-90% fewer tokens — just install one file, restart MiMoCode.
+
+Your AI agent runs `git status` → 200 lines of output → $0.002 per call. This hook rewrites it to `rtk git status` → 5 lines → $0.0001. Same information, 97% cheaper. Works automatically — no `rtk` prefix needed.
 
 ## How it works
 
