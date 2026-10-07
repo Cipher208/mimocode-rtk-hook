@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/murat-mimocode/mimocode-rtk-hook"
+    "url": "https://github.com/Cipher208/mimocode-rtk-hook"
   },
   "files": ["hooks/"]
 }
